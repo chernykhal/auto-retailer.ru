@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="(feat) add logo">
+    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="(feat) disable teams feature">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/fortify.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/fortify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,6 +141,8 @@
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/vendor/tightenco/ziggy" />
       <path value="$PROJECT_DIR$/vendor/inertiajs/inertia-laravel" />
+      <path value="$PROJECT_DIR$/vendor/santigarcor/laratrust" />
+      <path value="$PROJECT_DIR$/vendor/kkszymanowski/traitor" />
     </include_path>
   </component>
   <component name="ProjectId" id="1isMYVyEHNKmMy0Z834dYaxLhdv" />
@@ -206,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602699547596</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="(feat) disable teams feature">
+      <created>1602701078424</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602701078424</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +228,8 @@
     <MESSAGE value="(feat) gitignore" />
     <MESSAGE value="(feat) add jetstream" />
     <MESSAGE value="(feat) add logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="(feat) add logo" />
+    <MESSAGE value="(feat) disable teams feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) disable teams feature" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2162" y="453" width="328" height="207" key="Github.ShareDialog" timestamp="1602698277757">
