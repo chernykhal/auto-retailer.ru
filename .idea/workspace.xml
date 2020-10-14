@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="(feat) add logo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Jetstream/ApplicationLogo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Jetstream/ApplicationLogo.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Jetstream/ApplicationMark.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Jetstream/ApplicationMark.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/application-mark.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/jetstream/components/application-mark.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,6 +244,14 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="276" key="GridCell.Tab.0.right/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602698627823" />
+    <state x="2121" y="478" width="399" height="156" key="NewPhpFileDialog" timestamp="1602700731712">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2121" y="478" width="399" height="156" key="NewPhpFileDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602700731712" />
+    <state x="2086" y="236" width="470" height="640" key="RollbackChangesDialog" timestamp="1602700638908">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2086" y="236" width="470" height="640" key="RollbackChangesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602700638908" />
     <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602698344441">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
