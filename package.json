@@ -24,5 +24,10 @@
         "tailwindcss": "^1.8.0",
         "vue": "^2.5.17",
         "vue-template-compiler": "^2.6.10"
+    },
+    "dependencies": {
+        "vue-dadata": "^1.4.10",
+        "vue-suggestions": "^1.4.0",
+        "vue-the-mask": "^0.11.1"
     }
 }

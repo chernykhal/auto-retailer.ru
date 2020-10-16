@@ -12,38 +12,40 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
     /**
      * Validate and update the given user's profile information.
      *
-     * @param  mixed  $user
-     * @param  array  $input
+     * @param mixed $user
+     * @param array $input
      * @return void
      */
     public function update($user, array $input)
     {
         Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255', Rule::unique('users')->ignore($user->id)],
+            'inn' => ['required', 'digits_between:1,255', Rule::unique('users')->ignore($user)],
+            'f_name' => ['required', 'string', 'max:255',],
+            'l_name' => ['required', 'string', 'max:255',],
+            'm_name' => ['required', 'string', 'max:255',],
+            'adress' => ['required', 'string', 'max:255',],
+            'phone' => ['required', 'string', 'max:255', Rule::unique('users')->ignore($user)],
             'photo' => ['nullable', 'image', 'max:1024'],
         ])->validateWithBag('updateProfileInformation');
 
         if (isset($input['photo'])) {
             $user->updateProfilePhoto($input['photo']);
         }
-
-        if ($input['email'] !== $user->email &&
-            $user instanceof MustVerifyEmail) {
-            $this->updateVerifiedUser($user, $input);
-        } else {
-            $user->forceFill([
-                'name' => $input['name'],
-                'email' => $input['email'],
-            ])->save();
-        }
+        $user->update([
+            'inn' => $input['inn'],
+            'f_name' => $input['f_name'],
+            'l_name' => $input['l_name'],
+            'm_name' => $input['m_name'],
+            'phone' => $input['phone'],
+            'adress' => $input['adress'],
+        ]);
     }
 
     /**
      * Update the given verified user's profile information.
      *
-     * @param  mixed  $user
-     * @param  array  $input
+     * @param mixed $user
+     * @param array $input
      * @return void
      */
     protected function updateVerifiedUser($user, array $input)
