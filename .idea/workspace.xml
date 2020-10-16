@@ -24,9 +24,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Jetstream/Welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Jetstream/Welcome.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Layouts/AppLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Layouts/AppLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Dashboard.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,7 +235,7 @@
       <workItem from="1602757039129" duration="607000" />
       <workItem from="1602773295534" duration="4542000" />
       <workItem from="1602855735727" duration="80000" />
-      <workItem from="1602856409737" duration="12628000" />
+      <workItem from="1602856409737" duration="13074000" />
     </task>
     <task id="LOCAL-00001" summary="(feat) gitignore">
       <created>1602698330137</created>
@@ -323,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602870369890</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="(feat) edit dashboard page">
+      <created>1602872378088</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1602872378088</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,13 +358,14 @@
     <MESSAGE value="(feat) edit profile page&#10;edit validation page" />
     <MESSAGE value="(feat) edit profile page" />
     <MESSAGE value="(feat) edit profile page&#10;remove delete and session section from profile page" />
-    <option name="LAST_COMMIT_MESSAGE" value="(feat) edit profile page&#10;remove delete and session section from profile page" />
+    <MESSAGE value="(feat) edit dashboard page" />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) edit dashboard page" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1698" y="119" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602870369801">
+    <state x="1698" y="119" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602872378026">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1698" y="119" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602870369801" />
+    <state x="1698" y="119" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602872378026" />
     <state x="1466" y="126" width="1720" height="854" key="DiffContextDialog" timestamp="1602868329489">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
