@@ -60,6 +60,9 @@
                                             <jet-dropdown-link :href="route('profile.show')">
                                                 Сотрудники и учет смен
                                             </jet-dropdown-link>
+                                            <jet-dropdown-link :href="route('roles.index')">
+                                                Должности
+                                            </jet-dropdown-link>
                                         </template>
                                     </jet-dropdown>
                                 </div>
@@ -186,28 +189,23 @@
             <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                 <div class="pt-2 pb-3 space-y-1">
                     <jet-responsive-nav-link :href="route('dashboard')" :active="$page.currentRouteName == 'dashboard'">
-                        Dashboard
+                        Главная
                     </jet-responsive-nav-link>
                 </div>
 
                 <!-- Responsive Settings Options -->
                 <div class="pt-4 pb-1 border-t border-gray-200">
                     <div class="flex items-center px-4">
-                        <div class="flex-shrink-0">
-                            <img class="h-10 w-10 rounded-full" :src="$page.user.profile_photo_url"
-                                 :alt="$page.user.name"/>
-                        </div>
-
-                        <div class="ml-3">
-                            <div class="font-medium text-base text-gray-800">{{ $page.user.name }}</div>
-                            <div class="font-medium text-sm text-gray-500">{{ $page.user.email }}</div>
+                        <div>
+                            <div class="font-medium text-base text-gray-800">{{ $page.user.f_name }}</div>
+                            <div class="font-medium text-sm text-gray-500">{{ $page.user.phone }}</div>
                         </div>
                     </div>
 
                     <div class="mt-3 space-y-1">
                         <jet-responsive-nav-link :href="route('profile.show')"
                                                  :active="$page.currentRouteName == 'profile.show'">
-                            Profile
+                            Профиль
                         </jet-responsive-nav-link>
 
                         <jet-responsive-nav-link :href="route('api-tokens.index')"
@@ -219,7 +217,7 @@
                         <!-- Authentication -->
                         <form method="POST" @submit.prevent="logout">
                             <jet-responsive-nav-link as="button">
-                                Logout
+                                Выйти
                             </jet-responsive-nav-link>
                         </form>
 
