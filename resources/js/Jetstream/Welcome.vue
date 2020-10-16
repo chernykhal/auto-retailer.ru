@@ -6,36 +6,35 @@
             </div>
 
             <div class="mt-8 text-2xl">
-                Welcome to your Jetstream application!
+                Добро пожаловать, {{ $page.user.f_name }}!
             </div>
 
             <div class="mt-6 text-gray-500">
-                Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application. Laravel is designed
-                to help you build your application using a development environment that is simple, powerful, and enjoyable. We believe
-                you should love expressing your creativity through programming, so we have spent time carefully crafting the Laravel
-                ecosystem to be a breath of fresh air. We hope you love it.
+                Auto Retailer CRM — это система, позволяющая эффективно управлять клиентскими базами, продажами. Давайте взглянем ближе!
             </div>
         </div>
 
         <div class="bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2">
             <div class="p-6">
                 <div class="flex items-center">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laravel.com/docs">Documentation</a></div>
+                    <svg class="w-8 h-8 text-gray-400" viewBox="0 0 108 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M54 108C44.2266 108 35.1914 105.592 26.8945 100.775C18.5977 95.959 12.041 89.4023 7.22461 81.1055C2.4082 72.8086 0 63.7734 0 54C0 44.2266 2.4082 35.1914 7.22461 26.8945C12.041 18.5977 18.5977 12.041 26.8945 7.22461C35.1914 2.4082 44.2266 0 54 0C63.7734 0 72.8086 2.4082 81.1055 7.22461C89.4023 12.041 95.959 18.5977 100.775 26.8945C105.592 35.1914 108 44.2266 108 54C108 63.7734 105.592 72.8086 100.775 81.1055C95.959 89.4023 89.4023 95.959 81.1055 100.775C72.8086 105.592 63.7734 108 54 108ZM14.0273 47.4609C13.6758 49.8516 13.5 52.0313 13.5 54C13.5 63.9844 16.7168 72.7207 23.1504 80.209C29.584 87.6973 37.6172 92.25 47.25 93.8672V73.6172C41.3438 72.4219 36.4922 70.0137 32.6953 66.3926C28.8984 62.7715 27 58.6406 27 54C27 53.2969 27.0703 52.5586 27.2109 51.7852C21.7266 50.7305 17.332 49.2891 14.0273 47.4609ZM54 13.5C46.4062 13.5 39.4277 15.4512 33.0645 19.3535C26.7012 23.2559 21.7617 28.4414 18.2461 34.9102C26.6133 38.6367 38.5312 40.5 54 40.5C69.4688 40.5 81.3867 38.6367 89.7539 34.9102C86.2383 28.4414 81.2988 23.2559 74.9355 19.3535C68.5723 15.4512 61.5938 13.5 54 13.5ZM80.7891 51.7852C80.9297 52.5586 81 53.2969 81 54C81 58.6406 79.1016 62.7891 75.3047 66.4453C71.5078 70.1016 66.6562 72.4922 60.75 73.6172V93.8672C70.3828 92.25 78.416 87.6973 84.8496 80.209C91.2832 72.7207 94.5 63.9844 94.5 54C94.5 52.0313 94.3242 49.8516 93.9727 47.4609C90.7383 49.2891 86.3438 50.7305 80.7891 51.7852Z" fill="#6C84FF"/>
+                    </svg>
+
+                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a :href="route('dashboard')">Автомобили</a></div>
                 </div>
 
                 <div class="ml-12">
                     <div class="mt-2 text-sm text-gray-500">
-                        Laravel has wonderful documentation covering every aspect of the framework. Whether you're new to the framework or have previous experience, we recommend reading all of the documentation from beginning to end.
+                        Раздел управления базой автомобилей для продажи.
                     </div>
-
-                    <a href="https://laravel.com/docs">
+                    <a :href="route('dashboard')">
                         <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
-                                <div>Explore the documentation</div>
+                            <div>Перейти</div>
 
-                                <div class="ml-1 text-indigo-500">
-                                    <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                                </div>
+                            <div class="ml-1 text-indigo-500">
+                                <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -43,18 +42,21 @@
 
             <div class="p-6 border-t border-gray-200 md:border-t-0 md:border-l">
                 <div class="flex items-center">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://laracasts.com">Laracasts</a></div>
+                    <svg class="w-8 h-8 text-gray-400" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M33.3 51.8H29.6V59.2H33.3V51.8ZM77.7 59.2H81.4V51.8H77.7V59.2ZM33.3 29.6H29.6V37H33.3V29.6ZM48.1 37H51.8V29.6H48.1V37ZM77.7 3.7L80.3196 1.0804L79.2318 0H77.7V3.7ZM99.9 25.9H103.6V24.3682L102.52 23.2804L99.9 25.9V25.9ZM59.2 81.4L56.5804 84.0196L59.2 81.4ZM55.5 85.1L57.1576 88.4078L57.4536 88.2598L57.72 88.06L55.5 85.1ZM33.3 59.2H77.7V51.8H33.3V59.2ZM33.3 37H48.1V29.6H33.3V37ZM92.5 103.6H18.5V111H92.5V103.6ZM14.8 99.9V11.1H7.40002V99.9H14.8ZM18.5 7.4H77.7V0H18.5V7.4ZM96.2 25.9V99.9H103.6V25.9H96.2ZM75.0804 6.3196L97.2804 28.5196L102.52 23.2804L80.3196 1.0804L75.0804 6.3196V6.3196ZM18.5 103.6C17.5187 103.6 16.5776 103.21 15.8837 102.516C15.1898 101.822 14.8 100.881 14.8 99.9H7.40002C7.40002 102.844 8.56949 105.667 10.6511 107.749C12.7328 109.831 15.5561 111 18.5 111V103.6ZM92.5 111C95.4439 111 98.2673 109.831 100.349 107.749C102.431 105.667 103.6 102.844 103.6 99.9H96.2C96.2 100.881 95.8102 101.822 95.1163 102.516C94.4224 103.21 93.4813 103.6 92.5 103.6V111ZM14.8 11.1C14.8 10.1187 15.1898 9.17759 15.8837 8.4837C16.5776 7.78982 17.5187 7.4 18.5 7.4V0C15.5561 0 12.7328 1.16946 10.6511 3.25111C8.56949 5.33277 7.40002 8.1561 7.40002 11.1H14.8ZM40.5076 86.2692C41.329 83.805 43.6674 81.5184 46.6496 80.7192C49.4394 79.9718 53.0284 80.4602 56.5804 84.0196L61.8196 78.7804C56.4916 73.4524 50.209 72.0982 44.733 73.5708C39.4568 74.9916 35.1352 78.995 33.485 83.9308L40.515 86.2692H40.5076ZM56.5804 84.0196C56.7886 84.2217 56.9839 84.4367 57.165 84.6634L63.011 80.1198C62.6419 79.6515 62.244 79.2067 61.8196 78.7878L56.5804 84.0196ZM57.165 84.6634C57.7422 85.4034 57.609 85.6402 57.6312 85.4774C57.646 85.3738 57.6756 85.544 57.2316 85.9436C56.5919 86.4784 55.8663 86.9012 55.0856 87.1942C54.1476 87.5716 53.1693 87.8397 52.17 87.9934C51.5604 88.1094 50.937 88.1343 50.32 88.0674C50.1942 88.0378 50.4532 88.0674 50.838 88.3412C51.3099 88.7054 51.6568 89.2073 51.8305 89.7775C52.0042 90.3477 51.9961 90.9578 51.8074 91.5232C51.7655 91.6458 51.7083 91.7627 51.6372 91.871C51.6224 91.8858 51.7482 91.723 52.17 91.3752C53.0136 90.6944 54.5676 89.7028 57.1576 88.4152L53.8424 81.7922C51.0526 83.1834 48.9584 84.4562 47.5228 85.618C46.7948 86.1862 46.1475 86.8509 45.5988 87.5938C44.901 88.5281 44.5362 89.6692 44.5628 90.835C44.6368 92.4334 45.5026 93.61 46.4498 94.2982C47.286 94.9198 48.211 95.1862 48.8918 95.3268C50.2756 95.6006 51.8518 95.5266 53.28 95.312C56.092 94.8828 59.7328 93.6692 62.2118 91.4196C63.4994 90.243 64.7204 88.5558 64.9794 86.3432C65.2458 84.0788 64.4318 81.955 63.0036 80.1272L57.1576 84.6634H57.165ZM57.72 88.06C58.9039 87.1546 60.1906 86.392 61.5532 85.7882L58.6154 78.995C56.8394 79.7646 55.0634 80.808 53.28 82.14L57.72 88.06V88.06ZM61.5532 85.7882C66.3632 83.7088 70.6626 84.804 75.0656 86.8982C76.1756 87.431 77.256 88.0082 78.3512 88.6002C79.4168 89.1774 80.5416 89.7916 81.6072 90.3392C83.6496 91.3678 86.1804 92.5 88.8 92.5V85.1C88.1044 85.1 86.9648 84.7522 84.952 83.7384C84.0048 83.25 83.0132 82.7024 81.8736 82.0882C80.7636 81.4888 79.5352 80.8302 78.2476 80.2234C73.0824 77.7592 66.3262 75.665 58.6154 78.995L61.5532 85.7882V85.7882Z" fill="#6C84FF"/>
+                    </svg>
+
+                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a :href="route('dashboard')">Контракты</a></div>
                 </div>
 
                 <div class="ml-12">
                     <div class="mt-2 text-sm text-gray-500">
-                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                        Раздел управления базой контрактов, заключенных с клиентами.
                     </div>
 
-                    <a href="https://laracasts.com">
+                    <a :href="route('dashboard')">
                         <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
-                                <div>Start watching Laracasts</div>
+                                <div>Перейти</div>
 
                                 <div class="ml-1 text-indigo-500">
                                     <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -66,27 +68,52 @@
 
             <div class="p-6 border-t border-gray-200">
                 <div class="flex items-center">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a href="https://tailwindcss.com/">Tailwind</a></div>
+                    <svg class="w-8 h-8 text-gray-400" viewBox="0 0 111 111" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M55.5 10.4062C30.636 10.4062 10.4062 30.636 10.4062 55.5C10.4062 80.364 30.636 100.594 55.5 100.594C80.364 100.594 100.594 80.364 100.594 55.5C100.594 30.636 80.364 10.4062 55.5 10.4062ZM55.5 17.3438C76.538 17.3438 93.6562 34.462 93.6562 55.5C93.6562 76.538 76.538 93.6562 55.5 93.6562C34.462 93.6562 17.3438 76.538 17.3438 55.5C17.3438 34.462 34.462 17.3438 55.5 17.3438ZM38.1562 41.625C30.8927 41.625 25.6341 45.8118 25.6341 45.8118L29.8659 51.3132C29.8659 51.3132 33.6191 48.5625 38.1597 48.5625C42.7003 48.5625 46.45 51.3132 46.45 51.3132L50.6819 45.8118C50.6715 45.8118 45.4163 41.625 38.1562 41.625ZM72.8438 41.625C65.5802 41.625 60.3216 45.8118 60.3216 45.8118L64.5534 51.3132C64.5534 51.3132 68.3066 48.5625 72.8472 48.5625C77.3878 48.5625 81.1375 51.3132 81.1375 51.3132L85.3694 45.8118C85.359 45.8118 80.1038 41.625 72.8438 41.625ZM37.4972 65.9062L31.5309 69.375C33.9399 73.5165 37.3666 76.9743 41.4863 79.4205C42.5165 80.031 43.5814 80.5756 44.6879 81.0508C46.9389 82.0102 49.3083 82.6635 51.7329 82.9933C54.2326 83.3363 56.7674 83.3363 59.2671 82.9933C65.285 82.1606 70.8598 79.3647 75.1262 75.0395C76.8076 73.3426 78.2669 71.4393 79.4691 69.375L73.5028 65.9062C71.1996 69.9002 67.6347 73.0156 63.3683 74.763C59.1018 76.5104 54.3757 76.7907 49.9327 75.5598C48.1861 75.0761 46.5111 74.3635 44.9515 73.4404C41.8614 71.6114 39.2952 69.0165 37.5007 65.9062H37.4972Z" fill="#6C84FF"/>
+                    </svg>
+
+                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a :href="route('dashboard')">Клиенты</a></div>
                 </div>
 
                 <div class="ml-12">
                     <div class="mt-2 text-sm text-gray-500">
-                        Laravel Jetstream is built with Tailwind, an amazing utility first CSS framework that doesn't get in your way. You'll be amazed how easily you can build and maintain fresh, modern designs with this wonderful framework at your fingertips.
+                        Раздел управления базой клиентов.
                     </div>
+                    <a :href="route('dashboard')">
+                        <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                            <div>Перейти</div>
+
+                            <div class="ml-1 text-indigo-500">
+                                <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
 
             <div class="p-6 border-t border-gray-200 md:border-l">
                 <div class="flex items-center">
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-400"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold">Authentication</div>
+                    <svg class="w-8 h-8 text-gray-400" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M71.2295 46.8957C71.5351 47.2005 71.7775 47.5626 71.9429 47.9612C72.1083 48.3599 72.1935 48.7872 72.1935 49.2188C72.1935 49.6504 72.1083 50.0778 71.9429 50.4764C71.7775 50.8751 71.5351 51.2371 71.2295 51.5419L51.542 71.2294C51.2372 71.535 50.8751 71.7774 50.4765 71.9429C50.0778 72.1083 49.6505 72.1934 49.2189 72.1934C48.7873 72.1934 48.3599 72.1083 47.9613 71.9429C47.5626 71.7774 47.2005 71.535 46.8957 71.2294L37.052 61.3857C36.7469 61.0806 36.5049 60.7184 36.3398 60.3198C36.1747 59.9212 36.0897 59.494 36.0897 59.0626C36.0897 58.6311 36.1747 58.2039 36.3398 57.8053C36.5049 57.4067 36.7469 57.0445 37.052 56.7394C37.6681 56.1233 38.5038 55.7772 39.3751 55.7772C39.8066 55.7772 40.2338 55.8621 40.6324 56.0273C41.031 56.1924 41.3932 56.4344 41.6982 56.7394L49.2189 64.2666L66.5832 46.8957C66.888 46.5901 67.2501 46.3477 67.6488 46.1823C68.0474 46.0168 68.4748 45.9317 68.9064 45.9317C69.338 45.9317 69.7653 46.0168 70.164 46.1823C70.5626 46.3477 70.9247 46.5901 71.2295 46.8957V46.8957Z" fill="#6C84FF"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5625 26.25V91.875C6.5625 93.6155 7.2539 95.2847 8.48461 96.5154C9.71532 97.7461 11.3845 98.4375 13.125 98.4375H91.875C93.6155 98.4375 95.2847 97.7461 96.5154 96.5154C97.7461 95.2847 98.4375 93.6155 98.4375 91.875V26.25H6.5625ZM13.125 6.5625C9.64403 6.5625 6.30564 7.94531 3.84422 10.4067C1.38281 12.8681 0 16.2065 0 19.6875L0 91.875C0 95.356 1.38281 98.6944 3.84422 101.156C6.30564 103.617 9.64403 105 13.125 105H91.875C95.356 105 98.6944 103.617 101.156 101.156C103.617 98.6944 105 95.356 105 91.875V19.6875C105 16.2065 103.617 12.8681 101.156 10.4067C98.6944 7.94531 95.356 6.5625 91.875 6.5625H13.125Z" fill="#6C84FF"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M22.9688 0C23.839 0 24.6736 0.345702 25.2889 0.961056C25.9043 1.57641 26.25 2.41101 26.25 3.28125V6.5625C26.25 7.43274 25.9043 8.26734 25.2889 8.88269C24.6736 9.49805 23.839 9.84375 22.9688 9.84375C22.0985 9.84375 21.2639 9.49805 20.6486 8.88269C20.0332 8.26734 19.6875 7.43274 19.6875 6.5625V3.28125C19.6875 2.41101 20.0332 1.57641 20.6486 0.961056C21.2639 0.345702 22.0985 0 22.9688 0V0ZM82.0312 0C82.9015 0 83.7361 0.345702 84.3514 0.961056C84.9668 1.57641 85.3125 2.41101 85.3125 3.28125V6.5625C85.3125 7.43274 84.9668 8.26734 84.3514 8.88269C83.7361 9.49805 82.9015 9.84375 82.0312 9.84375C81.161 9.84375 80.3264 9.49805 79.7111 8.88269C79.0957 8.26734 78.75 7.43274 78.75 6.5625V3.28125C78.75 2.41101 79.0957 1.57641 79.7111 0.961056C80.3264 0.345702 81.161 0 82.0312 0V0Z" fill="#6C84FF"/>
+                    </svg>
+                    <div class="ml-4 text-lg text-gray-600 leading-7 font-semibold"><a :href="route('dashboard')">Сотрудники и учет смен</a></div>
                 </div>
 
                 <div class="ml-12">
                     <div class="mt-2 text-sm text-gray-500">
-                        Authentication and registration views are included with Laravel Jetstream, as well as support for user email verification and resetting forgotten passwords. So, you're free to get started what matters most: building your application.
+                        Раздел управления базой сотрудников и учета смен.
                     </div>
+                    <a :href="route('dashboard')">
+                        <div class="mt-3 flex items-center text-sm font-semibold text-indigo-700">
+                            <div>Перейти</div>
+
+                            <div class="ml-1 text-indigo-500">
+                                <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
