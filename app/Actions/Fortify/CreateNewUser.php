@@ -22,15 +22,27 @@ class CreateNewUser implements CreatesNewUsers
     public function create(array $input)
     {
         Validator::make($input, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'inn' => ['required', 'string', 'max:255', 'unique:users'],
+            'f_name' => ['required', 'string', 'max:255',],
+            'l_name' => ['required', 'string', 'max:255',],
+            'm_name' => ['required', 'string', 'max:255',],
+            'phone' => ['required', 'string', 'max:255', 'unique:users'],
             'password' => $this->passwordRules(),
         ])->validate();
 
         return DB::transaction(function () use ($input) {
             return tap(User::create([
-                'name' => $input['name'],
-                'email' => $input['email'],
+                'inn' => $input['inn'],
+                'f_name' => $input['f_name'],
+                'l_name' => $input['l_name'],
+                'm_name' => $input['m_name'],
+                'phone' => $input['phone'],
+                'employ_date' => $input['employ_date'],
+                'employ_document_date' => $input['employ_document_date'],
+                'employ_document_number' => $input['employ_document_number'],
+                'department_id' => $input['department_id'],
+                'salary' => $input['salary'],
+                'adress' => $input['adress'],
                 'password' => Hash::make($input['password']),
             ]), function (User $user) {
                 $this->createTeam($user);

@@ -1,11 +1,11 @@
 <template>
     <jet-form-section @submitted="updateProfileInformation">
         <template #title>
-            Profile Information
+            Информация пользователя
         </template>
 
         <template #description>
-            Update your account's profile information and email address.
+            Измените свои личные данные
         </template>
 
         <template #form>
@@ -40,19 +40,30 @@
 
                 <jet-input-error :message="form.error('photo')" class="mt-2" />
             </div>
-
-            <!-- Name -->
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="name" value="Name" />
-                <jet-input id="name" type="text" class="mt-1 block w-full" v-model="form.name" autocomplete="name" />
-                <jet-input-error :message="form.error('name')" class="mt-2" />
+                <x-jet-label for="inn" value="{{ __('ИНН') }}" />
+                <x-jet-input id="inn" class="block mt-1 w-full" type="number" name="inn" v-mode="form.inn" :value="old('inn')" autocomplete="none" />
+                <jet-input-error :message="form.error('inn')" class="mt-2" />
             </div>
-
-            <!-- Email -->
             <div class="col-span-6 sm:col-span-4">
-                <jet-label for="email" value="Email" />
-                <jet-input id="email" type="email" class="mt-1 block w-full" v-model="form.email" />
-                <jet-input-error :message="form.error('email')" class="mt-2" />
+                <jet-label for="f_name" value="Имя" />
+                <jet-input id="f_name" type="text" class="mt-1 block w-full" v-model="form.name" />
+                <jet-input-error :message="form.error('f_name')" class="mt-2" />
+            </div>
+            <div class="col-span-6 sm:col-span-4">
+                <jet-label for="l_name" value="Фамилия" />
+                <jet-input id="l_name" type="text" class="mt-1 block w-full" v-model="form.l_name" />
+                <jet-input-error :message="form.error('l_name')" class="mt-2" />
+            </div>
+            <div class="col-span-6 sm:col-span-4">
+                <jet-label for="m_name" value="Отчество" />
+                <jet-input id="m_name" type="text" class="mt-1 block w-full" v-model="form.m_name" />
+                <jet-input-error :message="form.error('m_name')" class="mt-2" />
+            </div>
+            <div class="col-span-6 sm:col-span-4">
+                <jet-label for="phone" value="Телефон" />
+                <jet-input id="phone" type="text" class="mt-1 block w-full" v-model="form.phone" />
+                <jet-input-error :message="form.error('phone')" class="mt-2" />
             </div>
         </template>
 
