@@ -41,7 +41,7 @@
                 <jet-input-error :message="form.error('photo')" class="mt-2" />
             </div>
             <div class="col-span-6 sm:col-span-4">
-                <x-jet-label for="inn" value="{{ __('ИНН') }}" />
+                <x-jet-label for="inn" value="ИНН" />
                 <x-jet-input id="inn" class="block mt-1 w-full" type="number" name="inn" v-mode="form.inn" :value="old('inn')" autocomplete="none" />
                 <jet-input-error :message="form.error('inn')" class="mt-2" />
             </div>
