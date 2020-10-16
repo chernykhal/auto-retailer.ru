@@ -20,13 +20,13 @@
                     <two-factor-authentication-form class="mt-10 sm:mt-0" />
                 </div>
 
-                <jet-section-border />
+<!--                <jet-section-border />-->
 
-                <logout-other-browser-sessions-form :sessions="sessions" class="mt-10 sm:mt-0" />
+<!--                <logout-other-browser-sessions-form :sessions="sessions" class="mt-10 sm:mt-0" />-->
 
-                <jet-section-border />
+<!--                <jet-section-border />-->
 
-                <delete-user-form class="mt-10 sm:mt-0" />
+<!--                <delete-user-form class="mt-10 sm:mt-0" />-->
             </div>
         </div>
     </app-layout>

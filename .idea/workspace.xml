@@ -22,9 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="(feat) edit profile page&#10;add phone mask">
+    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Profile/Show.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Profile/Show.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Profile/UpdatePasswordForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Profile/UpdatePasswordForm.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Profile/UpdateProfileInformationForm.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Profile/UpdateProfileInformationForm.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +237,7 @@
       <workItem from="1602757039129" duration="607000" />
       <workItem from="1602773295534" duration="4542000" />
       <workItem from="1602855735727" duration="80000" />
-      <workItem from="1602856409737" duration="9774000" />
+      <workItem from="1602856409737" duration="10594000" />
     </task>
     <task id="LOCAL-00001" summary="(feat) gitignore">
       <created>1602698330137</created>
@@ -307,7 +309,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602869307795</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="(feat) edit profile page&#10;edit validation page">
+      <created>1602869605797</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602869605797</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,9 +344,14 @@
     <MESSAGE value="(feat) edit inner logic" />
     <MESSAGE value="(feat) edit profile page" />
     <MESSAGE value="(feat) edit profile page&#10;add phone mask" />
-    <option name="LAST_COMMIT_MESSAGE" value="(feat) edit profile page&#10;add phone mask" />
+    <MESSAGE value="(feat) edit profile page&#10;edit validation page" />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) edit profile page&#10;edit validation page" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1698" y="119" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602869605730">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1698" y="119" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602869605730" />
     <state x="1466" y="126" width="1720" height="854" key="DiffContextDialog" timestamp="1602868329489">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -378,10 +392,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1815" y="188" width="1022" height="737" key="SettingsEditor/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602861660855" />
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602869319779">
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602869634145">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602869319779" />
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602869634145" />
     <state x="807" y="143" width="2102" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602868070731">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -390,9 +404,9 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1990" y="252" key="run.anything.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602865693292" />
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1602869332818">
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1602869641973">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602869332818" />
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602869641973" />
   </component>
 </project>
