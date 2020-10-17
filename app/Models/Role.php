@@ -55,4 +55,30 @@ class Role extends LaratrustRole
         }
         return $query;
     }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getDisplayName(): ?string
+    {
+        return $this->display_name;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+
 }

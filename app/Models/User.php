@@ -2,14 +2,21 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\DatabaseNotification;
+use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Jetstream\HasTeams;
 use Laravel\Sanctum\HasApiTokens;
 use Laratrust\Traits\LaratrustUserTrait;
+use Laravel\Sanctum\PersonalAccessToken;
 
 /**
  * App\Models\User
@@ -30,50 +37,50 @@ use Laratrust\Traits\LaratrustUserTrait;
  * @property string|null $two_factor_secret
  * @property string|null $two_factor_recovery_codes
  * @property string|null $remember_token
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\Team $currentTeam
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read Team $currentTeam
  * @property-read string $profile_photo_url
- * @property-read \Illuminate\Notifications\DatabaseNotificationCollection|\Illuminate\Notifications\DatabaseNotification[] $notifications
+ * @property-read DatabaseNotificationCollection|DatabaseNotification[] $notifications
  * @property-read int|null $notifications_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Team[] $ownedTeams
+ * @property-read Collection|Team[] $ownedTeams
  * @property-read int|null $owned_teams_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Permission[] $permissions
+ * @property-read Collection|Permission[] $permissions
  * @property-read int|null $permissions_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Role[] $roles
+ * @property-read Collection|Role[] $roles
  * @property-read int|null $roles_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Team[] $teams
+ * @property-read Collection|Team[] $teams
  * @property-read int|null $teams_count
- * @property-read \Illuminate\Database\Eloquent\Collection|\Laravel\Sanctum\PersonalAccessToken[] $tokens
+ * @property-read Collection|PersonalAccessToken[] $tokens
  * @property-read int|null $tokens_count
- * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|User orWherePermissionIs($permission = '')
- * @method static \Illuminate\Database\Eloquent\Builder|User orWhereRoleIs($role = '', $team = null)
- * @method static \Illuminate\Database\Eloquent\Builder|User query()
- * @method static \Illuminate\Database\Eloquent\Builder|User whereAdress($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereDepartmentId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereDoesntHavePermission()
- * @method static \Illuminate\Database\Eloquent\Builder|User whereDoesntHaveRole()
- * @method static \Illuminate\Database\Eloquent\Builder|User whereEmployDate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereEmployDocumentDate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereEmployDocumentNumber($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereFName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereInn($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereLName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereMName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User wherePermissionIs($permission = '', $boolean = 'and')
- * @method static \Illuminate\Database\Eloquent\Builder|User wherePhone($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereRoleIs($role = '', $team = null, $boolean = 'and')
- * @method static \Illuminate\Database\Eloquent\Builder|User whereSalary($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorRecoveryCodes($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereTwoFactorSecret($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
- * @mixin \Eloquent
+ * @method static Builder|User newModelQuery()
+ * @method static Builder|User newQuery()
+ * @method static Builder|User orWherePermissionIs($permission = '')
+ * @method static Builder|User orWhereRoleIs($role = '', $team = null)
+ * @method static Builder|User query()
+ * @method static Builder|User whereAdress($value)
+ * @method static Builder|User whereCreatedAt($value)
+ * @method static Builder|User whereDepartmentId($value)
+ * @method static Builder|User whereDoesntHavePermission()
+ * @method static Builder|User whereDoesntHaveRole()
+ * @method static Builder|User whereEmployDate($value)
+ * @method static Builder|User whereEmployDocumentDate($value)
+ * @method static Builder|User whereEmployDocumentNumber($value)
+ * @method static Builder|User whereFName($value)
+ * @method static Builder|User whereId($value)
+ * @method static Builder|User whereInn($value)
+ * @method static Builder|User whereLName($value)
+ * @method static Builder|User whereMName($value)
+ * @method static Builder|User wherePassword($value)
+ * @method static Builder|User wherePermissionIs($permission = '', $boolean = 'and')
+ * @method static Builder|User wherePhone($value)
+ * @method static Builder|User whereRememberToken($value)
+ * @method static Builder|User whereRoleIs($role = '', $team = null, $boolean = 'and')
+ * @method static Builder|User whereSalary($value)
+ * @method static Builder|User whereTwoFactorRecoveryCodes($value)
+ * @method static Builder|User whereTwoFactorSecret($value)
+ * @method static Builder|User whereUpdatedAt($value)
+ * @mixin Eloquent
  */
 class User extends Authenticatable
 {
