@@ -22,13 +22,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="(feat) add create method for roles">
+    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="(feat) add roles management to register users">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Customer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/CustomerFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_17_183052_create_customers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/CustomerSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/CreateNewUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/JetstreamServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/JetstreamServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +250,7 @@
       <workItem from="1602883052603" duration="115000" />
       <workItem from="1602923109253" duration="14752000" />
       <workItem from="1602939169253" duration="16055000" />
-      <workItem from="1602956859366" duration="2167000" />
+      <workItem from="1602956859366" duration="3748000" />
     </task>
     <task id="LOCAL-00001" summary="(feat) gitignore">
       <created>1602698330137</created>
@@ -418,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602954614145</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="(feat) add roles management to register users">
+      <created>1602959297503</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1602959297503</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +469,8 @@
     <MESSAGE value="(feat) add delete method for roles" />
     <MESSAGE value="(feat) add description field for roles" />
     <MESSAGE value="(feat) add create method for roles" />
-    <option name="LAST_COMMIT_MESSAGE" value="(feat) add create method for roles" />
+    <MESSAGE value="(feat) add roles management to register users" />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) add roles management to register users" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2117" y="272" width="408" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1602957694320">
@@ -471,10 +481,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602943157042" />
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602956877721">
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602959412159">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602956877721" />
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602959412159" />
     <state x="1466" y="126" width="1720" height="854" key="DiffContextDialog" timestamp="1602874338618">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -515,10 +525,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1815" y="188" width="1022" height="737" key="SettingsEditor/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602929248885" />
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602954619087">
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602959310065">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602954619087" />
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602959310065" />
     <state x="807" y="143" width="2102" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602868070731">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -531,9 +541,9 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1990" y="252" key="run.anything.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602879713462" />
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1602959017761">
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1602960263425">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602959017761" />
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602960263425" />
   </component>
 </project>
