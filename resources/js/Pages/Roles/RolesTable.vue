@@ -10,8 +10,8 @@
                                     <div class="table-cell px-4 py-2 ">{{ role.id }}</div>
                                     <div class="table-cell px-4 py-2 ">{{ role.name }}</div>
                                     <div class="table-cell px-4 py-2 ">{{ role.display_name }}</div>
-                                    <div class="table-cell px-4 py-2 ">
-                                        <inertia-link :href="route('roles.edit', role)" title="Редактировать">
+                                    <div class="table-cell px-4 py-2 text-right">
+                                        <inertia-link :href="route('roles.edit', role)" title="Редактировать" class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 bg-white ">
                                             <svg class="w-5 h-5" viewBox="0 0 84 84" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -19,16 +19,47 @@
                                                     fill="#6C84FF"/>
                                             </svg>
                                         </inertia-link>
-                                    </div>
-                                    <div class="table-cell px-4 py-2 ">
-                                        <inertia-link :href="route('roles.destroy', role)" title="Удалить">
+                                        <jet-secondary-button @click.native="confirmRoleDeletion(role)" title="Удалить" class="bg-white ">
                                             <svg class="w-5 h-5" viewBox="0 0 89 89" fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M31.2891 15.9922H30.5938C30.9762 15.9922 31.2891 15.6793 31.2891 15.2969V15.9922H57.7109V15.2969C57.7109 15.6793 58.0238 15.9922 58.4062 15.9922H57.7109V22.25H63.9688V15.2969C63.9688 12.2288 61.4743 9.73438 58.4062 9.73438H30.5938C27.5257 9.73438 25.0312 12.2288 25.0312 15.2969V22.25H31.2891V15.9922ZM75.0938 22.25H13.9062C12.3679 22.25 11.125 23.4929 11.125 25.0312V27.8125C11.125 28.1949 11.4379 28.5078 11.8203 28.5078H17.0699L19.2167 73.9639C19.3558 76.9276 21.8067 79.2656 24.7705 79.2656H64.2295C67.202 79.2656 69.6442 76.9363 69.7833 73.9639L71.9301 28.5078H77.1797C77.5621 28.5078 77.875 28.1949 77.875 27.8125V25.0312C77.875 23.4929 76.6321 22.25 75.0938 22.25ZM63.5603 73.0078H25.4397L23.3364 28.5078H65.6636L63.5603 73.0078Z"
                                                     fill="#FF5454"/>
                                             </svg>
-                                        </inertia-link>
+                                        </jet-secondary-button>
+                                        <jet-dialog-modal :show="confirmingRoleDeletion"
+                                                          @close="confirmingRoleDeletion = false">
+                                            <template #title>
+                                                Удаление должности
+                                            </template>
+
+                                            <template #content>
+                                                Введите пароль, чтобы удалить должность {{role.name}}.
+
+                                                <div class="mt-4">
+                                                    <jet-input type="password" class="mt-1 block w-3/4"
+                                                               placeholder="Пароль"
+                                                               ref="password"
+                                                               v-model="deleteForm.password"
+                                                               @keyup.enter.native="deleteRole"/>
+
+                                                    <jet-input-error :message="deleteForm.error('password')"
+                                                                     class="mt-2"/>
+                                                </div>
+                                            </template>
+
+                                            <template #footer>
+                                                <jet-secondary-button @click.native="confirmingRoleDeletion = false">
+                                                    Отмена
+                                                </jet-secondary-button>
+
+                                                <jet-danger-button class="ml-2" @click.native="deleteRole"
+                                                                   :class="{ 'opacity-25': deleteForm.processing }"
+                                                                   :disabled="deleteForm.processing">
+                                                    Удалить
+                                                </jet-danger-button>
+                                            </template>
+                                        </jet-dialog-modal>
                                     </div>
                                 </div>
                             </div>
@@ -50,10 +81,14 @@ import JetLabel from './../../Jetstream/Label'
 import JetActionMessage from './../../Jetstream/ActionMessage'
 import JetSecondaryButton from './../../Jetstream/SecondaryButton'
 import JetSearchSection from "../../Jetstream/SearchSection";
+import JetDialogModal from "../../Jetstream/DialogModal";
+import JetDangerButton from "../../Jetstream/DangerButton";
 
 export default {
     components: {
         JetSearchSection,
+        JetDialogModal,
+        JetDangerButton,
         JetActionMessage,
         JetButton,
         JetFormSection,
@@ -63,9 +98,39 @@ export default {
         JetSecondaryButton,
         JetPhoneInput,
     },
-    props: {
-        roles: Array,
+    props: ['role','roles'],
+    data() {
+        return {
+            confirmingRoleDeletion: false,
+            deleting: false,
+            deleteForm: this.$inertia.form({
+                '_method': 'DELETE',
+                password: '',
+            }, {
+                bag: 'deleteRole'
+            }),
+        }
     },
-    methods: {},
+    methods: {
+        confirmRoleDeletion(role) {
+            this.deleteForm.password = '';
+            this.role = role;
+
+            this.confirmingRoleDeletion = true;
+
+            setTimeout(() => {
+                this.$refs.password.focus()
+            }, 250)
+        },
+        deleteRole() {
+            this.deleteForm.post(route('roles.destroy', this.role), {
+                preserveScroll: true
+            }).then(response => {
+                if (!this.deleteForm.hasErrors()) {
+                    this.confirmingRoleDeletion = false;
+                }
+            })
+        },
+    },
 }
 </script>

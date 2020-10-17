@@ -101,14 +101,17 @@ class RoleController extends Controller
     }
 
     /**
+     * @param Request $request
      * @param Role $role
-     * @return Response
+     * @return RedirectResponse
      * @throws Exception
      */
-    public function destroy(Role $role)
+    public function destroy(Request $request, Role $role)
     {
+        $password = $request->only('password');
+
         $role->delete();
         $roles = $this->roles->get()->all();
-        return Inertia::render('Roles/Index', ['roles' => $roles]);
+        return \Redirect::route('roles.index');
     }
 }
