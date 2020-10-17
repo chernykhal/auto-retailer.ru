@@ -22,11 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="(feat) add edit page for roles">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Roles/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/Index.vue" afterDir="false" />
+    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/resources/js/Pages/Roles/RolesTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/RolesTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Roles/UpdateRole.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/UpdateRole.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -245,7 +243,7 @@
       <workItem from="1602856409737" duration="22929000" />
       <workItem from="1602883052603" duration="115000" />
       <workItem from="1602923109253" duration="14752000" />
-      <workItem from="1602939169253" duration="12399000" />
+      <workItem from="1602939169253" duration="12504000" />
     </task>
     <task id="LOCAL-00001" summary="(feat) gitignore">
       <created>1602698330137</created>
@@ -394,7 +392,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602947654661</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="(feat) add delete method for roles">
+      <created>1602951958514</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1602951958514</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,17 +438,18 @@
     <MESSAGE value="(feat) add filter for positions page" />
     <MESSAGE value="(feat) add ru validation fields" />
     <MESSAGE value="(feat) add edit page for roles" />
-    <option name="LAST_COMMIT_MESSAGE" value="(feat) add edit page for roles" />
+    <MESSAGE value="(feat) add delete method for roles" />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) add delete method for roles" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602943157042">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602943157042" />
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602951208646">
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602951958393">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602951208646" />
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602951958393" />
     <state x="1466" y="126" width="1720" height="854" key="DiffContextDialog" timestamp="1602874338618">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>

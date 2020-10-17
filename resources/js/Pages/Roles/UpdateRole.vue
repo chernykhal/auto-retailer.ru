@@ -15,6 +15,11 @@
                 <jet-input id="display_name" type="text" class="mt-1 block w-full" v-model="form.display_name"/>
                 <jet-input-error :message="form.error('display_name')" class="mt-2"/>
             </div>
+            <div class="col-span-6 sm:col-span-4">
+                <jet-label for="name" value="Описание"/>
+                <jet-input id="description" type="text" class="mt-1 block w-full" v-model="form.description"/>
+                <jet-input-error :message="form.error('description')" class="mt-2"/>
+            </div>
         </template>
 
         <template #actions>
@@ -59,6 +64,7 @@ export default {
                 '_method': 'PUT',
                 name: this.role.name,
                 display_name: this.role.display_name,
+                description: this.role.description,
             }, {
                 bag: 'updateRole',
                 resetOnSuccess: false,
