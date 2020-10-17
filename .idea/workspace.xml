@@ -23,8 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Roles/RolesTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/RolesTable.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Roles/UpdateRole.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/UpdateRole.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/Create.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/StoreRole.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Roles/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ru/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/validation.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +247,7 @@
       <workItem from="1602856409737" duration="22929000" />
       <workItem from="1602883052603" duration="115000" />
       <workItem from="1602923109253" duration="14752000" />
-      <workItem from="1602939169253" duration="12504000" />
+      <workItem from="1602939169253" duration="15055000" />
     </task>
     <task id="LOCAL-00001" summary="(feat) gitignore">
       <created>1602698330137</created>
@@ -399,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602951958514</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="(feat) add description field for roles">
+      <created>1602952092675</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1602952092675</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,17 +450,18 @@
     <MESSAGE value="(feat) add ru validation fields" />
     <MESSAGE value="(feat) add edit page for roles" />
     <MESSAGE value="(feat) add delete method for roles" />
-    <option name="LAST_COMMIT_MESSAGE" value="(feat) add delete method for roles" />
+    <MESSAGE value="(feat) add description field for roles" />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) add description field for roles" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602943157042">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602943157042" />
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602951958393">
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602952092591">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602951958393" />
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602952092591" />
     <state x="1466" y="126" width="1720" height="854" key="DiffContextDialog" timestamp="1602874338618">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -490,10 +502,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1815" y="188" width="1022" height="737" key="SettingsEditor/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602929248885" />
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602947659538">
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602952117000">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602947659538" />
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602952117000" />
     <state x="807" y="143" width="2102" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602868070731">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -506,9 +518,9 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1990" y="252" key="run.anything.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602879713462" />
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1602951662042">
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1602953612074">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602951662042" />
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602953612074" />
   </component>
 </project>

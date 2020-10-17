@@ -166,6 +166,7 @@ return [
         'f_name'                => 'Имя',
         'l_name'                => 'Фамиля',
         'm_name'                => 'Отчество',
+        'display_name'          => 'Отображаемое название',
         'username'              => 'Никнейм',
         'email'                 => 'E-Mail адрес',
         'first_name'            => 'Имя',

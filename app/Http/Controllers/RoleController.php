@@ -40,24 +40,31 @@ class RoleController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
-        //
+        return Inertia::render('Roles/Create');
     }
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return RedirectResponse
+     * @throws ValidationException
      */
     public function store(Request $request)
     {
-        //
+        $frd = $request->all();
+        Validator::make($frd, [
+            'name' => ['required', Rule::unique('roles')],
+            'display_name' => ['required', Rule::unique('roles')],
+        ])->validateWithBag('storeRole');
+        $this->roles->create([
+            'name' => $frd['name'],
+            'display_name' => $frd['display_name'],
+            'description' => $frd['description'],
+        ]);
+        return \Redirect::route('roles.index');
     }
 
     /**
@@ -96,6 +103,7 @@ class RoleController extends Controller
         $role->update([
             'name' => $frd['name'],
             'display_name' => $frd['display_name'],
+            'description' => $frd['description'],
         ]);
         return \Redirect::route('roles.index');
     }
