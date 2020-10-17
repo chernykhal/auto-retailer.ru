@@ -163,6 +163,9 @@ return [
 
     'attributes' => [
         'name'                  => 'Имя',
+        'f_name'                => 'Имя',
+        'l_name'                => 'Фамиля',
+        'm_name'                => 'Отчество',
         'username'              => 'Никнейм',
         'email'                 => 'E-Mail адрес',
         'first_name'            => 'Имя',
