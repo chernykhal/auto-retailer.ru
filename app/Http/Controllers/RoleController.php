@@ -3,8 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Role;
+use Exception;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -31,7 +36,7 @@ class RoleController extends Controller
     {
         $frd = $request->all();
         $roles = $this->roles->filter($frd)->get()->all();
-        return Inertia::render('Roles/Index', ['roles'=>$roles]);
+        return Inertia::render('Roles/Index', ['roles' => $roles]);
     }
 
     /**
@@ -47,7 +52,7 @@ class RoleController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -58,7 +63,7 @@ class RoleController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -67,36 +72,43 @@ class RoleController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Role $role
+     * @return Response
      */
-    public function edit($id)
+    public function edit(Role $role)
     {
-        //
+        return Inertia::render('Roles/Edit', ['role' => $role]);
     }
 
     /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Role $role
+     * @return RedirectResponse
+     * @throws ValidationException
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Role $role)
     {
-        //
+        $frd = $request->all();
+        Validator::make($frd, [
+            'name' => ['required', Rule::unique('roles')->ignore($role)],
+            'display_name' => ['required', Rule::unique('roles')->ignore($role)],
+        ])->validateWithBag('updateRole');
+        $role->update([
+            'name' => $frd['name'],
+            'display_name' => $frd['display_name'],
+        ]);
+        return \Redirect::route('roles.index');
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Role $role
+     * @return Response
+     * @throws Exception
      */
-    public function destroy($id)
+    public function destroy(Role $role)
     {
-        //
+        $role->delete();
+        $roles = $this->roles->get()->all();
+        return Inertia::render('Roles/Index', ['roles' => $roles]);
     }
 }

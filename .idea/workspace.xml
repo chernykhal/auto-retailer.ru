@@ -22,19 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/auto-retailer.ru.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/auto-retailer.ru.iml" afterDir="false" />
+    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="(feat) add filter for positions page">
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/Edit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/UpdateRole.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Membership.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Membership.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Team.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Team.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Jetstream/SearchSection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Jetstream/SearchSection.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Roles/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Pages/Roles/RolesTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/RolesTable.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +248,7 @@
       <workItem from="1602856409737" duration="22929000" />
       <workItem from="1602883052603" duration="115000" />
       <workItem from="1602923109253" duration="14752000" />
-      <workItem from="1602939169253" duration="2711000" />
+      <workItem from="1602939169253" duration="8431000" />
     </task>
     <task id="LOCAL-00001" summary="(feat) gitignore">
       <created>1602698330137</created>
@@ -382,7 +376,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602938750417</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="(feat) add filter for positions page">
+      <created>1602941944680</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1602941944680</updated>
+    </task>
+    <task id="LOCAL-00020" summary="(feat) add ru validation fields">
+      <created>1602947545178</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1602947545178</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,17 +426,19 @@
     <MESSAGE value="(feat) add roles index page" />
     <MESSAGE value="(feat) edit login way" />
     <MESSAGE value="(feat) add ru lang support" />
-    <option name="LAST_COMMIT_MESSAGE" value="(feat) add ru lang support" />
+    <MESSAGE value="(feat) add filter for positions page" />
+    <MESSAGE value="(feat) add ru validation fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) add ru validation fields" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602875468472">
+    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602943157042">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602875468472" />
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602938750318">
+    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602943157042" />
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602947544992">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602938750318" />
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602947544992" />
     <state x="1466" y="126" width="1720" height="854" key="DiffContextDialog" timestamp="1602874338618">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -469,10 +479,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1815" y="188" width="1022" height="737" key="SettingsEditor/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602929248885" />
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602882818334">
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602941949820">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602882818334" />
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602941949820" />
     <state x="807" y="143" width="2102" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602868070731">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -485,9 +495,9 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1990" y="252" key="run.anything.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602879713462" />
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1602940739109">
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1602945666718">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602940739109" />
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602945666718" />
   </component>
 </project>

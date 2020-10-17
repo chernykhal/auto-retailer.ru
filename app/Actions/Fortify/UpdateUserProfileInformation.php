@@ -18,15 +18,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
      */
     public function update($user, array $input)
     {
-        $messages = ['required'=>'Поле :attribute должно быть заполнено'];
-        $attributes = [
-          'inn'=>'ИНН',
-          'f_name'=>'Имя',
-          'l_name'=>'Фамилия',
-          'm_name'=>'Отчество',
-          'adress'=>'Адрес',
-          'phone'=>'Телефон',
-        ];
+
         Validator::make($input, [
             'inn' => ['required', 'digits_between:1,255', Rule::unique('users')->ignore($user)],
             'f_name' => ['required', 'string', 'max:255',],
@@ -35,7 +27,7 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             'adress' => ['required', 'string', 'max:255',],
             'phone' => ['required', 'string', 'max:255', Rule::unique('users')->ignore($user)],
             'photo' => ['nullable', 'image', 'max:1024'],
-        ],$messages,$attributes)->validateWithBag('updateProfileInformation');
+        ])->validateWithBag('updateProfileInformation');
 
         if (isset($input['photo'])) {
             $user->updateProfilePhoto($input['photo']);
