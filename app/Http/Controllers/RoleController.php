@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Role;
 use Exception;
+use Hash;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\URL;
@@ -116,8 +117,16 @@ class RoleController extends Controller
      */
     public function destroy(Request $request, Role $role)
     {
-        $password = $request->only('password');
-
+        $password = $request->get('password');
+        $hashedPassword = Hash::make($password);
+        $user = \Auth::user();
+        $request->validate([
+            'password' => ['required', function ($attribute, $hashedPassword, $fail) use ($user) {
+                if (!\Hash::check($hashedPassword, $user->getAuthPassword())) {
+                    return $fail(__('Пароль не подходит'));
+                }
+            }],
+        ]);
         $role->delete();
         $roles = $this->roles->get()->all();
         return \Redirect::route('roles.index');
