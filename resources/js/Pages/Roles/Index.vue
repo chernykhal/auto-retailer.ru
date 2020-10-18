@@ -65,7 +65,9 @@ export default {
         JetSecondaryButton,
         JetRolesTable,
     },
-    props: ['roles'],
+    props: {
+        roles: Array,
+    },
     data() {
         return {
             form: this.$inertia.form({

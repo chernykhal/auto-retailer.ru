@@ -35,7 +35,7 @@
                                             </template>
 
                                             <template #content>
-                                                Введите пароль, чтобы удалить должность {{role.name}}.
+                                                Введите пароль, чтобы удалить должность
 
                                                 <div class="mt-4">
                                                     <jet-input type="password" class="mt-1 block w-3/4"
@@ -63,6 +63,7 @@
                                         </jet-dialog-modal>
                                     </div>
                                 </div>
+<!--                                <jet-pagination :links="roles.links"></jet-pagination>-->
                             </div>
                         </div>
                     </div>
@@ -84,6 +85,7 @@ import JetSecondaryButton from './../../Jetstream/SecondaryButton'
 import JetSearchSection from "../../Jetstream/SearchSection";
 import JetDialogModal from "../../Jetstream/DialogModal";
 import JetDangerButton from "../../Jetstream/DangerButton";
+import JetPagination from "../../Jetstream/Pagination";
 
 export default {
     components: {
@@ -98,8 +100,9 @@ export default {
         JetLabel,
         JetSecondaryButton,
         JetPhoneInput,
+        // JetPagination,
     },
-    props: ['role','roles'],
+    props: ['roles'],
     data() {
         return {
             confirmingRoleDeletion: false,

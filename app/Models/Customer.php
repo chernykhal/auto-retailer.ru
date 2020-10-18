@@ -32,6 +32,7 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Customer wherePhone($value)
  * @method static Builder|Customer whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @method static Builder|Customer filter($frd)
  */
 class Customer extends Model
 {
@@ -44,4 +45,80 @@ class Customer extends Model
         'adress',
         'phone'
     ];
+
+    public function scopeFilter(Builder $query, array $frd): Builder
+    {
+        foreach ($frd as $key => $value) {
+            if (null === $value) {
+                continue;
+            }
+            switch ($key) {
+                case 'search':
+                    {
+                        $query->where(function (Builder $query) use ($value): Builder {
+                            return $query->orWhere('id', $value)
+                                ->orWhere('f_name', 'like', '%' . $value . '%')
+                                ->orWhere('l_name', 'like', '%' . $value . '%')
+                                ->orWhere('m_name', 'like', '%' . $value . '%')
+                                ->orWhere('phone', 'like', '%' . $value . '%')
+                                ->orWhere('inn', 'like', '%' . $value . '%')
+                                ->orWhere('adress', 'like', '%' . $value . '%');
+                        });
+                    }
+                    break;
+            }
+        }
+        return $query;
+    }
+
+    /**
+     * @return int
+     */
+    public function getInn(): int
+    {
+        return $this->inn;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFName(): string
+    {
+        return $this->f_name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLName(): string
+    {
+        return $this->l_name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMName(): string
+    {
+        return $this->m_name;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getAdress(): ?string
+    {
+        return $this->adress;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhone(): string
+    {
+        return $this->phone;
+    }
+
+
+
 }
