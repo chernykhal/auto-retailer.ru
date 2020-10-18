@@ -7,13 +7,13 @@
                         <div class="table w-full">
                             <div class="table-row-group">
                                 <div v-for="customer in customers" :key="customer.id" class="table-row">
-                                    <div class="table-cell px-4 py-2 ">{{ customer.id }}</div>
-                                    <div class="table-cell px-4 py-2 ">{{ customer.f_name }}</div>
-                                    <div class="table-cell px-4 py-2 ">{{ customer.l_name }}</div>
-                                    <div class="table-cell px-4 py-2 ">{{ customer.m_name }}</div>
-                                    <div class="table-cell px-4 py-2 ">{{ customer.inn }}</div>
-                                    <div class="table-cell px-4 py-2 ">{{ customer.adress }}</div>
-                                    <div class="table-cell px-4 py-2 ">{{ customer.phone }}</div>
+                                    <div class="table-cell px-4 py-2 " title="№">{{ customer.id }}</div>
+                                    <div class="table-cell px-4 py-2 " title="Имя">{{ customer.f_name }}</div>
+                                    <div class="table-cell px-4 py-2 " title="Фамилия">{{ customer.l_name }}</div>
+                                    <div class="table-cell px-4 py-2 " title="Отчество">{{ customer.m_name }}</div>
+                                    <div class="table-cell px-4 py-2 " title="ИНН">{{ customer.inn }}</div>
+                                    <div class="table-cell px-4 py-2 " title="Адрес">{{ customer.adress }}</div>
+                                    <div class="table-cell px-4 py-2 " title="Телефон">{{ customer.phone }}</div>
                                     <div class="table-cell px-4 py-2 text-right">
                                         <inertia-link :href="route('customers.edit', customer)" title="Редактировать"
                                                       class="inline-flex items-center px-4 py-2 bg-white border border-gray-300 rounded-md font-semibold text-xs text-gray-700 uppercase tracking-widest shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:text-gray-800 active:bg-gray-50 transition ease-in-out duration-150 bg-white ">
@@ -69,7 +69,7 @@
                                         </jet-dialog-modal>
                                     </div>
                                 </div>
-<!--                                <jet-pagination :links="customers.links"></jet-pagination>-->
+                                <!--                                <jet-pagination :links="customers.links"></jet-pagination>-->
                             </div>
                         </div>
                     </div>
