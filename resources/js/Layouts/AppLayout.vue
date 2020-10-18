@@ -48,7 +48,7 @@
                                                 Управление
                                             </div>
 
-                                            <jet-dropdown-link :href="route('profile.show')">
+                                            <jet-dropdown-link :href="route('cars.index')">
                                                 Автомобили
                                             </jet-dropdown-link>
                                             <jet-dropdown-link :href="route('profile.show')">

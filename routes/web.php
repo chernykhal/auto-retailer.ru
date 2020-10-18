@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -23,8 +24,11 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
+
 Route::resource('roles', RoleController::class);
 Route::resource('customers', CustomerController::class);
+Route::resource('cars', CarController::class);
+
 Route::resource('users', UserController::class);
 Route::get('/users/{user}/workdays', [UserController::class, 'workDays'])->name('users.work-days');
 Route::put('/users/{user}/workdays/store', [UserController::class, 'workDaysStore'])->name('users.work-days-store');

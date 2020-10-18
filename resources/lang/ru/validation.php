@@ -195,6 +195,10 @@ return [
         'time'                  => 'Время',
         'available'             => 'Доступно',
         'size'                  => 'Размер',
+        'registration_number'   => 'Регистрационный номер',
+        'brand'                 => 'Марка',
+        'model'                 => 'Модель',
+        'price'                 => 'Цена',
     ],
 
 
