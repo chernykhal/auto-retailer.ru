@@ -36,7 +36,7 @@ class RoleController extends Controller
     public function index(Request $request)
     {
         $frd = $request->all();
-        $roles = $this->roles->filter($frd)->get()->all();
+        $roles = $this->roles->filter($frd)->paginate(10)->all();
         return Inertia::render('Roles/Index', ['roles' => $roles]);
     }
 
@@ -128,7 +128,6 @@ class RoleController extends Controller
             }],
         ]);
         $role->delete();
-        $roles = $this->roles->get()->all();
         return \Redirect::route('roles.index');
     }
 }
