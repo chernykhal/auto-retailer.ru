@@ -22,15 +22,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="(feat) add roles management to register users">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Customer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/CustomerFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_17_183052_create_customers_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/CustomerSeeder.php" afterDir="false" />
+    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="(ref) edit destroy method for role controller">
+      <change afterPath="$PROJECT_DIR$/resources/js/Jetstream/Pagination.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Customers/Create.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Customers/CustomersTable.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Customers/Edit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Customers/Index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Customers/StoreCustomer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Customers/UpdateCustomer.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Jetstream/Welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Jetstream/Welcome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Layouts/AppLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Layouts/AppLayout.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Roles/Index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/Index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Pages/Roles/RolesTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Pages/Roles/RolesTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,13 +209,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/js/Pages" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/Pages" />
       <recent name="$PROJECT_DIR$/resources/lang" />
     </key>
   </component>
@@ -250,7 +260,8 @@
       <workItem from="1602883052603" duration="115000" />
       <workItem from="1602923109253" duration="14752000" />
       <workItem from="1602939169253" duration="16055000" />
-      <workItem from="1602956859366" duration="3748000" />
+      <workItem from="1602956859366" duration="3905000" />
+      <workItem from="1603007243359" duration="9655000" />
     </task>
     <task id="LOCAL-00001" summary="(feat) gitignore">
       <created>1602698330137</created>
@@ -427,7 +438,28 @@
       <option name="project" value="LOCAL" />
       <updated>1602959297503</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="(feat) add customers model">
+      <created>1602960680900</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1602960680900</updated>
+    </task>
+    <task id="LOCAL-00027" summary="(feat) add password check for role destroy">
+      <created>1603010080290</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1603010080291</updated>
+    </task>
+    <task id="LOCAL-00028" summary="(ref) edit destroy method for role controller&#10;add pagination for roles">
+      <created>1603013873182</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1603013873182</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,8 +479,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="(feat) gitignore" />
-    <MESSAGE value="(feat) add jetstream" />
     <MESSAGE value="(feat) add logo" />
     <MESSAGE value="(feat) disable teams feature" />
     <MESSAGE value="(feat) add tables and laratrust package" />
@@ -470,25 +500,29 @@
     <MESSAGE value="(feat) add description field for roles" />
     <MESSAGE value="(feat) add create method for roles" />
     <MESSAGE value="(feat) add roles management to register users" />
-    <option name="LAST_COMMIT_MESSAGE" value="(feat) add roles management to register users" />
+    <MESSAGE value="(feat) add customers model" />
+    <MESSAGE value="(feat) add password check for role destroy" />
+    <MESSAGE value="(ref) edit destroy method for role controller" />
+    <MESSAGE value="(ref) edit destroy method for role controller&#10;add pagination for roles" />
+    <option name="LAST_COMMIT_MESSAGE" value="(ref) edit destroy method for role controller&#10;add pagination for roles" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2117" y="272" width="408" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1602957694320">
+    <state x="2117" y="272" width="441" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1603009175667">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2117" y="272" width="408" height="569" key="#com.intellij.ide.util.MemberChooser/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602957694320" />
-    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602943157042">
+    <state x="2117" y="272" width="441" height="569" key="#com.intellij.ide.util.MemberChooser/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603009175667" />
+    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603009238567">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602943157042" />
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1602959412159">
+    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603009238567" />
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1603013872970">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602959412159" />
-    <state x="1466" y="126" width="1720" height="854" key="DiffContextDialog" timestamp="1602874338618">
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603013872970" />
+    <state x="1466" y="126" width="1720" height="854" key="DiffContextDialog" timestamp="1603013794772">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1466" y="126" width="1720" height="854" key="DiffContextDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602874338618" />
+    <state x="1466" y="126" width="1720" height="854" key="DiffContextDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603013794772" />
     <state x="2162" y="453" width="328" height="207" key="Github.ShareDialog" timestamp="1602698277757">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -497,22 +531,22 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2052" y="240" width="537" height="633" key="Github.UntrackedFilesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602698298764" />
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1602956430624">
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1603011482464">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602956430624" />
-    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1602956430624">
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603011482464" />
+    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1603011482463">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.center/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602956430624" />
-    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1602956430623">
+    <state width="1874" height="276" key="GridCell.Tab.0.center/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603011482463" />
+    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1603011482463">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.left/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602956430623" />
-    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1602956430624">
+    <state width="1874" height="276" key="GridCell.Tab.0.left/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603011482463" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1603011482463">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.right/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602956430624" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603011482463" />
     <state x="2121" y="478" width="399" height="156" key="NewPhpFileDialog" timestamp="1602924256392">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -525,10 +559,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1815" y="188" width="1022" height="737" key="SettingsEditor/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602929248885" />
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602959310065">
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1602960688498">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602959310065" />
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602960688498" />
     <state x="807" y="143" width="2102" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602868070731">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -541,9 +575,9 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1990" y="252" key="run.anything.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602879713462" />
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1602960263425">
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1603018502925">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602960263425" />
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603018502925" />
   </component>
 </project>

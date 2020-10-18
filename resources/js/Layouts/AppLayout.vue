@@ -54,8 +54,8 @@
                                             <jet-dropdown-link :href="route('profile.show')">
                                                 Контракты
                                             </jet-dropdown-link>
-                                            <jet-dropdown-link :href="route('profile.show')">
-                                                Клиенты
+                                            <jet-dropdown-link :href="route('customers.index')">
+                                                Покупатели
                                             </jet-dropdown-link>
                                             <jet-dropdown-link :href="route('profile.show')">
                                                 Сотрудники и учет смен
