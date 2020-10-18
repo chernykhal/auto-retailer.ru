@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 Route::resource('roles', RoleController::class);
 Route::resource('customers', CustomerController::class);
+Route::resource('users', UserController::class);
+Route::get('/users/{user}/workdays', [UserController::class, 'workDays'])->name('users.work-days');
+Route::put('/users/{user}/workdays/store', [UserController::class, 'workDaysStore'])->name('users.work-days-store');
+

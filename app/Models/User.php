@@ -6,6 +6,7 @@ use Eloquent;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\DatabaseNotification;
 use Illuminate\Notifications\DatabaseNotificationCollection;
@@ -81,6 +82,7 @@ use Laravel\Sanctum\PersonalAccessToken;
  * @method static Builder|User whereTwoFactorSecret($value)
  * @method static Builder|User whereUpdatedAt($value)
  * @mixin Eloquent
+ * @method static Builder|User filter($frd)
  */
 class User extends Authenticatable
 {
@@ -142,4 +144,44 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    /**
+     * @param Builder $query
+     * @param array $frd
+     * @return Builder
+     */
+    public function scopeFilter(Builder $query, array $frd): Builder
+    {
+        foreach ($frd as $key => $value) {
+            if (null === $value) {
+                continue;
+            }
+            switch ($key) {
+                case 'search':
+                    {
+                        $query->where(function (Builder $query) use ($value): Builder {
+                            return $query->orWhere('id', $value)
+                                ->orWhere('f_name', 'like', '%' . $value . '%')
+                                ->orWhere('l_name', 'like', '%' . $value . '%')
+                                ->orWhere('m_name', 'like', '%' . $value . '%')
+                                ->orWhere('phone', 'like', '%' . $value . '%')
+                                ->orWhere('inn', 'like', '%' . $value . '%')
+                                ->orWhere('adress', 'like', '%' . $value . '%');
+                        });
+                    }
+                    break;
+            }
+        }
+        return $query;
+    }
+
+    /**
+     * @return HasOne
+     */
+    public function workDays(): HasOne
+    {
+        return $this->hasOne(WorkDays::class);
+    }
+
+
 }

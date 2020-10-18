@@ -45,6 +45,7 @@ class CreateNewUser implements CreatesNewUsers
         ]);
         $this->createTeam($user);
         $user->syncRoles($input['roles']);
+        $user->workDays()->create();
         return $user;
     }
 
