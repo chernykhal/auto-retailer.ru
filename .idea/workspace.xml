@@ -22,19 +22,23 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="(feat) edit customers table">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/CarController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Car.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/CarFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_18_161024_create_cars_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/CarSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Cars/CarsTable.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Cars/Create.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Cars/Edit.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Cars/Index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Cars/StoreCar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Cars/UpdateCar.vue" afterDir="false" />
+    <list default="true" id="ef755115-6849-479b-a240-41fdbe04a222" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ContractController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Contract.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/ContractFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_10_18_164817_create_contracts_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/ContractSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Contracts/ContractsTable.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Contracts/Create.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Contracts/Edit.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Contracts/Index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Contracts/StoreContract.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Pages/Contracts/UpdateContract.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Car.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Car.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Customer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/WorkDays.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/WorkDays.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Jetstream/Welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Jetstream/Welcome.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/Layouts/AppLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Layouts/AppLayout.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/lang/ru/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ru/validation.php" afterDir="false" />
@@ -261,7 +265,7 @@
       <workItem from="1602939169253" duration="16055000" />
       <workItem from="1602956859366" duration="3905000" />
       <workItem from="1603007243359" duration="21801000" />
-      <workItem from="1603035749372" duration="3677000" />
+      <workItem from="1603035749372" duration="11735000" />
     </task>
     <task id="LOCAL-00001" summary="(feat) gitignore">
       <created>1602698330137</created>
@@ -501,7 +505,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603037700443</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="(feat) add cars table">
+      <created>1603039592760</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1603039592760</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,7 +532,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="(feat) edit profile page&#10;edit validation page" />
     <MESSAGE value="(feat) edit profile page&#10;remove delete and session section from profile page" />
     <MESSAGE value="(feat) edit dashboard page" />
     <MESSAGE value="(feat) edit navbar" />
@@ -546,21 +556,22 @@
     <MESSAGE value="(ref) add links for main page" />
     <MESSAGE value="(feat) create users views" />
     <MESSAGE value="(feat) edit customers table" />
-    <option name="LAST_COMMIT_MESSAGE" value="(feat) edit customers table" />
+    <MESSAGE value="(feat) add cars table" />
+    <option name="LAST_COMMIT_MESSAGE" value="(feat) add cars table" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2117" y="272" width="441" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1603009175667">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2117" y="272" width="441" height="569" key="#com.intellij.ide.util.MemberChooser/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603009175667" />
-    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603038808512">
+    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603040732353">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603038808512" />
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1603039206459">
+    <state x="2059" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603040732353" />
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2" timestamp="1603039592623">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603039206459" />
+    <state x="1698" y="26" width="912" height="932" key="CommitChangelistDialog2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603039592623" />
     <state x="1466" y="126" width="1720" height="854" key="DiffContextDialog" timestamp="1603013794772">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -573,22 +584,22 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2052" y="240" width="537" height="633" key="Github.UntrackedFilesDialog/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602698298764" />
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1603037401676">
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom" timestamp="1603045120067">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.bottom/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603037401676" />
-    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1603037401675">
+    <state width="1874" height="276" key="GridCell.Tab.0.bottom/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603045120067" />
+    <state width="1874" height="276" key="GridCell.Tab.0.center" timestamp="1603045120067">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.center/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603037401675" />
-    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1603037401675">
+    <state width="1874" height="276" key="GridCell.Tab.0.center/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603045120067" />
+    <state width="1874" height="276" key="GridCell.Tab.0.left" timestamp="1603045120067">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.left/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603037401675" />
-    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1603037401676">
+    <state width="1874" height="276" key="GridCell.Tab.0.left/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603045120067" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right" timestamp="1603045120067">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="276" key="GridCell.Tab.0.right/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603037401676" />
+    <state width="1874" height="276" key="GridCell.Tab.0.right/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603045120067" />
     <state x="2121" y="478" width="399" height="156" key="NewPhpFileDialog" timestamp="1602924256392">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -601,10 +612,10 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1815" y="188" width="1022" height="737" key="SettingsEditor/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1602929248885" />
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603037303987">
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1603039595780">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603037303987" />
+    <state x="1921" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603039595780" />
     <state x="807" y="143" width="2102" height="854" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1602868070731">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
@@ -617,9 +628,9 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="1990" y="252" key="run.anything.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603038741366" />
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1603039135594">
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup" timestamp="1603048575970">
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
-    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603039135594" />
+    <state x="1989" y="258" width="672" height="678" key="search.everywhere.popup/1366.0.1920.1080/0.312.1366.768@1366.0.1920.1080" timestamp="1603048575970" />
   </component>
 </project>

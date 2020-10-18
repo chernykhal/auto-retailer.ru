@@ -119,6 +119,12 @@ class Customer extends Model
         return $this->phone;
     }
 
-
+    public static function getList()
+    {
+        return self::select('f_name', 'l_name', 'm_name', 'id')
+            ->orderbyDesc('id')
+            ->pluck('l_name', 'id')
+            ->toArray();
+    }
 
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\ContractController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -28,6 +29,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::resource('roles', RoleController::class);
 Route::resource('customers', CustomerController::class);
 Route::resource('cars', CarController::class);
+Route::resource('contracts', ContractController::class);
 
 Route::resource('users', UserController::class);
 Route::get('/users/{user}/workdays', [UserController::class, 'workDays'])->name('users.work-days');

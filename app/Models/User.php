@@ -83,6 +83,7 @@ use Laravel\Sanctum\PersonalAccessToken;
  * @method static Builder|User whereUpdatedAt($value)
  * @mixin Eloquent
  * @method static Builder|User filter($frd)
+ * @property-read \App\Models\WorkDays|null $workDays
  */
 class User extends Authenticatable
 {
@@ -183,5 +184,11 @@ class User extends Authenticatable
         return $this->hasOne(WorkDays::class);
     }
 
-
+    public static function getList()
+    {
+        return self::select('f_name', 'l_name', 'm_name', 'id')
+            ->orderbyDesc('id')
+            ->pluck('l_name', 'id')
+            ->toArray();
+    }
 }

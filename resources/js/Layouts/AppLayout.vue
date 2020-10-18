@@ -51,7 +51,7 @@
                                             <jet-dropdown-link :href="route('cars.index')">
                                                 Автомобили
                                             </jet-dropdown-link>
-                                            <jet-dropdown-link :href="route('profile.show')">
+                                            <jet-dropdown-link :href="route('contracts.index')">
                                                 Контракты
                                             </jet-dropdown-link>
                                             <jet-dropdown-link :href="route('customers.index')">
