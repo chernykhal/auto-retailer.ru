@@ -35,11 +35,11 @@
                                         <jet-dialog-modal :show="confirmingContractDeletion"
                                                           @close="confirmingContractDeletion = false">
                                             <template #title>
-                                                Удаление покупателя
+                                                Удаление контракта
                                             </template>
 
                                             <template #content>
-                                                Введите пароль, чтобы удалить покупателя
+                                                Введите пароль, чтобы удалить контракт
 
                                                 <div class="mt-4">
                                                     <jet-input type="password" class="mt-1 block w-3/4"
