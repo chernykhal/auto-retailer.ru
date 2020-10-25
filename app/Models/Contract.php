@@ -106,4 +106,94 @@ class Contract extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    /**
+     * @return int
+     */
+    public function getCarId(): int
+    {
+        return $this->car_id;
+    }
+
+    /**
+     * @param int $car_id
+     */
+    public function setCarId(int $car_id): void
+    {
+        $this->car_id = $car_id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDate(): string
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param string $date
+     */
+    public function setDate(string $date): void
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCustomerId(): int
+    {
+        return $this->customer_id;
+    }
+
+    /**
+     * @param int $customer_id
+     */
+    public function setCustomerId(int $customer_id): void
+    {
+        $this->customer_id = $customer_id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUserId(): int
+    {
+        return $this->user_id;
+    }
+
+    /**
+     * @param int $user_id
+     */
+    public function setUserId(int $user_id): void
+    {
+        $this->user_id = $user_id;
+    }
+
+    /**
+     * @return Car
+     */
+    public function getCar(): Car
+    {
+        return $this->car;
+    }
+
+    /**
+     * @return Customer
+     */
+    public function getCustomer(): Customer
+    {
+        return $this->customer;
+    }
+
+    /**
+     * @return User
+     */
+    public function getUser(): User
+    {
+        return $this->user;
+    }
+
+
 }

@@ -26,11 +26,19 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia\Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::resource('roles', RoleController::class);
-Route::resource('customers', CustomerController::class);
+Route::get('/cars/export', [CarController::class, 'export'])->name('cars.export');
 Route::resource('cars', CarController::class);
+
+Route::get('/roles/export', [RoleController::class, 'export'])->name('roles.export');
+Route::resource('roles', RoleController::class);
+
+Route::get('/customers/export', [CustomerController::class, 'export'])->name('customers.export');
+Route::resource('customers', CustomerController::class);
+
+Route::get('/contracts/export', [ContractController::class, 'export'])->name('contracts.export');
 Route::resource('contracts', ContractController::class);
 
+Route::get('/users/export', [UserController::class, 'export'])->name('users.export');
 Route::resource('users', UserController::class);
 Route::get('/users/{user}/workdays', [UserController::class, 'workDays'])->name('users.work-days');
 Route::put('/users/{user}/workdays/store', [UserController::class, 'workDaysStore'])->name('users.work-days-store');

@@ -87,4 +87,86 @@ class Car extends Model
             ->pluck('model', 'id')
             ->toArray();
     }
+
+    /**
+     * @return int
+     */
+    public function getRegistrationNumber(): int
+    {
+        return $this->registration_number;
+    }
+
+    /**
+     * @param int $registration_number
+     */
+    public function setRegistrationNumber(int $registration_number): void
+    {
+        $this->registration_number = $registration_number;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBrand(): string
+    {
+        return $this->brand;
+    }
+
+    /**
+     * @param string $brand
+     */
+    public function setBrand(string $brand): void
+    {
+        $this->brand = $brand;
+    }
+
+    /**
+     * @return string
+     */
+    public function getModel(): string
+    {
+        return $this->model;
+    }
+
+    /**
+     * @param string $model
+     */
+    public function setModel(string $model): void
+    {
+        $this->model = $model;
+    }
+
+    /**
+     * @return string
+     */
+    public function getYear(): string
+    {
+        return $this->year;
+    }
+
+    /**
+     * @param string $year
+     */
+    public function setYear(string $year): void
+    {
+        $this->year = $year;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPrice(): int
+    {
+        return $this->price;
+    }
+
+    /**
+     * @param int $price
+     */
+    public function setPrice(int $price): void
+    {
+        $this->price = $price;
+    }
+
+
 }

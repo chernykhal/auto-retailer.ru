@@ -14,6 +14,7 @@ use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 use Inertia\Response;
 use Redirect;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class UserController extends Controller
 {
@@ -164,5 +165,55 @@ class UserController extends Controller
         $frd = $request->all();
         $user->workDays()->update($frd);
         return Redirect::route('users.index');
+    }
+
+    /**
+     * @return StreamedResponse
+     */
+    public function export()
+    {
+        $headers = [
+            'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',
+            'Content-type' => 'text/csv; charset=UTF-8',
+            'Content-Encoding' => 'UTF-8',
+            'Content-Disposition' => 'attachment; filename=users-' . date("Y-m-d H:i:s") . '.csv',
+            'Expires' => '0',
+            'Pragma' => 'public',
+        ];
+
+        $users = $this->users->get();
+        foreach ($users as $user) {
+            $array = [
+                '№' => $user->getKey(),
+                'ИНН' => $user->getInn(),
+                'Фамилия' => $user->getLName(),
+                'Имя' => $user->getFName(),
+                'Отчество' => $user->getMName(),
+                'Адрес' => $user->getAdress(),
+                'Телефон' => $user->getPhone(),
+                'Дата приема на работу' => $user->getEmployDate(),
+                'Дата документа о приеме на работу' => $user->getEmployDocumentDate(),
+                'Номер документа о приеме на работу' => $user->getEmployDocumentNumber(),
+                'Номер отдела' => $user->getDepartmentId(),
+                'Зарплата' => $user->getSalary(),
+            ];
+            $list[] = $array;
+        }
+        $callback = function () use ($list) {
+            $flag = false;
+            $FH = fopen('php://output', 'wb');
+            fprintf($FH, chr(0xEF) . chr(0xBB) . chr(0xBF));
+
+            foreach ($list as $row) {
+                if (!$flag){
+                    echo implode("\t", array_keys($row)) . "\r\n";
+                    $flag = true;
+                }
+                echo implode("\t", array_values($row)) . "\r\n";
+            }
+            fclose($FH);
+        };
+
+        return response()->stream($callback, 200, $headers);
     }
 }

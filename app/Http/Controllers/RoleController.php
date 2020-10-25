@@ -13,6 +13,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 use Inertia\Response;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class RoleController extends Controller
 {
@@ -129,5 +130,47 @@ class RoleController extends Controller
         ]);
         $role->delete();
         return \Redirect::route('roles.index');
+    }
+
+    /**
+     * @return StreamedResponse
+     */
+    public function export()
+    {
+        $headers = [
+            'Cache-Control' => 'must-revalidate, post-check=0, pre-check=0',
+            'Content-type' => 'text/csv; charset=UTF-8',
+            'Content-Encoding' => 'UTF-8',
+            'Content-Disposition' => 'attachment; filename=roles-' . date("Y-m-d H:i:s") . '.csv',
+            'Expires' => '0',
+            'Pragma' => 'public',
+        ];
+
+        $roles = $this->roles->get();
+        foreach ($roles as $role) {
+            $array = [
+                '№' => $role->getKey(),
+                'Имя' => $role->getName(),
+                'Отоброжаемое имя' => $role->getDisplayName(),
+                'Описание' => $role->getDescription(),
+            ];
+            $list[] = $array;
+        }
+        $callback = function () use ($list) {
+            $flag = false;
+            $FH = fopen('php://output', 'wb');
+            fprintf($FH, chr(0xEF) . chr(0xBB) . chr(0xBF));
+
+            foreach ($list as $row) {
+                if (!$flag){
+                    echo implode("\t", array_keys($row)) . "\r\n";
+                    $flag = true;
+                }
+                echo implode("\t", array_values($row)) . "\r\n";
+            }
+            fclose($FH);
+        };
+
+        return response()->stream($callback, 200, $headers);
     }
 }

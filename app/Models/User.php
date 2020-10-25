@@ -191,4 +191,182 @@ class User extends Authenticatable
             ->pluck('l_name', 'id')
             ->toArray();
     }
+
+    /**
+     * @return int
+     */
+    public function getInn(): int
+    {
+        return $this->inn;
+    }
+
+    /**
+     * @param int $inn
+     */
+    public function setInn(int $inn): void
+    {
+        $this->inn = $inn;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFName(): string
+    {
+        return $this->f_name;
+    }
+
+    /**
+     * @param string $f_name
+     */
+    public function setFName(string $f_name): void
+    {
+        $this->f_name = $f_name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLName(): string
+    {
+        return $this->l_name;
+    }
+
+    /**
+     * @param string $l_name
+     */
+    public function setLName(string $l_name): void
+    {
+        $this->l_name = $l_name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMName(): string
+    {
+        return $this->m_name;
+    }
+
+    /**
+     * @param string $m_name
+     */
+    public function setMName(string $m_name): void
+    {
+        $this->m_name = $m_name;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getEmployDate(): ?string
+    {
+        return $this->employ_date;
+    }
+
+    /**
+     * @param string|null $employ_date
+     */
+    public function setEmployDate(?string $employ_date): void
+    {
+        $this->employ_date = $employ_date;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getEmployDocumentDate(): ?string
+    {
+        return $this->employ_document_date;
+    }
+
+    /**
+     * @param string|null $employ_document_date
+     */
+    public function setEmployDocumentDate(?string $employ_document_date): void
+    {
+        $this->employ_document_date = $employ_document_date;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getEmployDocumentNumber(): ?int
+    {
+        return $this->employ_document_number;
+    }
+
+    /**
+     * @param int|null $employ_document_number
+     */
+    public function setEmployDocumentNumber(?int $employ_document_number): void
+    {
+        $this->employ_document_number = $employ_document_number;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getDepartmentId(): ?int
+    {
+        return $this->department_id;
+    }
+
+    /**
+     * @param int|null $department_id
+     */
+    public function setDepartmentId(?int $department_id): void
+    {
+        $this->department_id = $department_id;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getSalary(): ?int
+    {
+        return $this->salary;
+    }
+
+    /**
+     * @param int|null $salary
+     */
+    public function setSalary(?int $salary): void
+    {
+        $this->salary = $salary;
+    }
+
+    /**
+     * @return string|null
+     */
+    public function getAdress(): ?string
+    {
+        return $this->adress;
+    }
+
+    /**
+     * @param string|null $adress
+     */
+    public function setAdress(?string $adress): void
+    {
+        $this->adress = $adress;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPhone(): string
+    {
+        return $this->phone;
+    }
+
+    /**
+     * @param string $phone
+     */
+    public function setPhone(string $phone): void
+    {
+        $this->phone = $phone;
+    }
+
+
 }
